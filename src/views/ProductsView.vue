@@ -57,7 +57,9 @@ import Product from "@/views/Product.vue";
                 </p>
 
                 <!-- price -->
-                <div class="flex items-center justify-between">
+                <div
+                  class="flex items-center justify-between flex-col md:flex-row"
+                >
                   <div class="">
                     <span class="font-semibold text-2xl mr-2 text-wine-red"
                       >$169.99</span
@@ -87,7 +89,9 @@ import Product from "@/views/Product.vue";
                 </p>
 
                 <!-- price -->
-                <div class="flex items-center justify-between gap-5">
+                <div
+                  class="flex items-center justify-between gap-5 flex-col md:flex-row"
+                >
                   <div class="">
                     <span class="font-semibold text-2xl mr-2 text-wine-red"
                       >$59.99</span
@@ -117,7 +121,9 @@ import Product from "@/views/Product.vue";
                 </p>
 
                 <!-- price -->
-                <div class="flex items-center justify-between gap-5">
+                <div
+                  class="flex items-center justify-between gap-5 flex-col md:flex-row"
+                >
                   <div class="">
                     <span class="font-semibold text-2xl mr-2 text-wine-red"
                       >$159.99</span
@@ -147,7 +153,9 @@ import Product from "@/views/Product.vue";
                 </p>
 
                 <!-- price -->
-                <div class="flex items-center justify-between gap-5">
+                <div
+                  class="flex items-center justify-between gap-5 flex-col md:flex-row"
+                >
                   <div class="">
                     <span class="font-semibold text-2xl mr-2 text-wine-red"
                       >$59.99</span

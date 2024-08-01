@@ -17,7 +17,7 @@ import Button from "@/components/Button.vue";
       </p>
       <div>
         <input
-          class="border-2 p-2 rounded-md min-w-60 border-wine-red/30 md:min-w-96"
+          class="border-2 p-2 rounded-md border-wine-red/30 md:min-w-96"
           type="text"
           placeholder="Email Address"
         />
