@@ -66,7 +66,7 @@ import Product from "@/views/Product.vue";
                       >199.99</span
                     >
                   </div>
-                  <Button>Add Cart</Button>
+                  <Button class="lg:text-xs">Add Cart</Button>
                 </div>
               </figcaption>
             </figure>
@@ -87,7 +87,7 @@ import Product from "@/views/Product.vue";
                 </p>
 
                 <!-- price -->
-                <div class="flex items-center gap-5">
+                <div class="flex items-center justify-between gap-5">
                   <div class="">
                     <span class="font-semibold text-2xl mr-2 text-wine-red"
                       >$59.99</span
@@ -96,7 +96,7 @@ import Product from "@/views/Product.vue";
                       >199.99</span
                     >
                   </div>
-                  <Button>Add Cart</Button>
+                  <Button class="lg:text-xs">Add Cart</Button>
                 </div>
               </figcaption>
             </figure>
@@ -117,7 +117,7 @@ import Product from "@/views/Product.vue";
                 </p>
 
                 <!-- price -->
-                <div class="flex items-center gap-5">
+                <div class="flex items-center justify-between gap-5">
                   <div class="">
                     <span class="font-semibold text-2xl mr-2 text-wine-red"
                       >$159.99</span
@@ -126,7 +126,7 @@ import Product from "@/views/Product.vue";
                       >199.99</span
                     >
                   </div>
-                  <Button>Add Cart</Button>
+                  <Button class="lg:text-xs">Add Cart</Button>
                 </div>
               </figcaption>
             </figure>
@@ -147,7 +147,7 @@ import Product from "@/views/Product.vue";
                 </p>
 
                 <!-- price -->
-                <div class="flex items-center gap-5">
+                <div class="flex items-center justify-between gap-5">
                   <div class="">
                     <span class="font-semibold text-2xl mr-2 text-wine-red"
                       >$59.99</span
@@ -156,7 +156,7 @@ import Product from "@/views/Product.vue";
                       >199.99</span
                     >
                   </div>
-                  <Button>Add Cart</Button>
+                  <Button class="lg:text-xs">Add Cart</Button>
                 </div>
               </figcaption>
             </figure>

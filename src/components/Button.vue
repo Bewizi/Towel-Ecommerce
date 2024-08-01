@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <button
-    class="bg-black text-white px-3 py-2 font-semibold rounded-md uppercase md:text-xs"
+    class="bg-black text-white px-3 py-2 font-semibold rounded-md uppercase"
   >
     <slot />
   </button>

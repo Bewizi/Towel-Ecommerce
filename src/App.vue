@@ -2,6 +2,7 @@
 import Info from "@/components/Info.vue";
 import Navbar from "@/components/Navbar.vue";
 import HomeView from "@/views/HomeView.vue";
+import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
@@ -11,8 +12,9 @@ import HomeView from "@/views/HomeView.vue";
   <Header>Welcome To My First Vue Project</Header>
   <FoodItems /> -->
   <section class="min-h-screen">
-    <Info class="hidden lg:block" />
+    <Info />
     <Navbar />
     <HomeView />
+    <Footer />
   </section>
 </template>
