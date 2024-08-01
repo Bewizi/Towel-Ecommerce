@@ -58,7 +58,7 @@ import Product from "@/views/Product.vue";
 
                 <!-- price -->
                 <div
-                  class="flex items-center justify-between flex-col md:flex-row"
+                  class="flex items-center justify-between gap-5 flex-col md:flex-row"
                 >
                   <div class="">
                     <span class="font-semibold text-2xl mr-2 text-wine-red"
