@@ -6,11 +6,6 @@ import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
-  <!-- <h1>Welcome</h1>
-  <Button />
-  <Card />
-  <Header>Welcome To My First Vue Project</Header>
-  <FoodItems /> -->
   <section class="min-h-screen">
     <Info />
     <Navbar />
