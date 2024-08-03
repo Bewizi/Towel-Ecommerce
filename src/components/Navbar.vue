@@ -68,7 +68,7 @@ onMounted(() => {
 
         <ul
           v-show="showAnchorLinks"
-          class="flex flex-col space-y-12 px-5 text-2xl absolute top-32 bg-white/55 min-h-screen shadow-lg z-50 lg:flex-row lg:space-x-10 lg:flex lg:visible lg:space-y-0 lg:relative lg:top-0 lg:bg-transparent lg:shadow-none lg:min-h-0 lg:px-0 lg:text-base lg:left-0 transition-all duration-300 ease-in-out"
+          class="flex flex-col space-y-8 px-5 text-lg absolute top-32 bg-white/55 min-h-screen shadow-lg z-50 lg:flex-row lg:space-x-10 lg:flex lg:visible lg:space-y-0 lg:relative lg:top-0 lg:bg-transparent lg:shadow-none lg:min-h-0 lg:px-0 lg:text-base lg:left-0 transition-all duration-300 ease-in-out"
           :class="isBarVisible ? '-left-56' : 'left-0'"
         >
           <li class="">
