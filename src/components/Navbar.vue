@@ -64,9 +64,9 @@ onMounted(() => {
 
         <ul
           :class="[
-            'flex flex-col space-y-10 px-5 text-xl absolute top-32 left-0 bg-white/55 min-h-screen shadow-lg z-50 transition-all duration-300',
+            'flex flex-col space-y-12 px-5 text-2xl absolute top-32 left-0 bg-white/55 min-h-screen shadow-lg z-50 transition-all duration-300',
             showAnchorLinks ? 'left-0' : '-left-56',
-            'lg:flex-row lg:space-x-10 lg:flex lg:visible lg:space-y-0 lg:relative lg:top-0 lg:bg-transparent lg:shadow-none lg:min-h-0 lg:px-0 lg:text-base lg:left-0',
+            'lg:flex-row lg:space-x-10 lg:flex lg:visible lg:space-y-0 lg:relative lg:top-0 lg:bg-transparent lg:shadow-none lg:min-h-0 lg:px-0 lg:text-base',
           ]"
         >
           <li class="">
