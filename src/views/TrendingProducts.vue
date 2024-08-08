@@ -1,8 +1,18 @@
 <script setup>
-import Header from "@/components/Header.vue";
-import ElegantBathroomTowelDisplay from "@/assets/images/elegant-bathroom-towel-display.png";
-import DecorativeTowelsOrnateBackground from "@/assets/images/decorative-towels-ornate-background.png";
-import TowelDisplay from "@/assets/images/towel-display.png";
+import { ref, onMounted } from "vue";
+import Header from "@/components/MainHeader.vue";
+import axios from "axios";
+
+const trendingProducts = ref([]);
+
+onMounted(async () => {
+  try {
+    const response = await axios.get("http://localhost:3000/products");
+    trendingProducts.value = response.data;
+  } catch (error) {
+    console.error("Error fetching products", error);
+  }
+});
 </script>
 
 <template>
@@ -18,65 +28,24 @@ import TowelDisplay from "@/assets/images/towel-display.png";
       class="grid grid-cols-1 place-content-center gap-5 md:grid-cols-2 lg:grid-cols-3 mb-12"
     >
       <!-- card 1 -->
-      <figure class="shadow-xl pb-5 rounded-md">
-        <img
-          :src="ElegantBathroomTowelDisplay"
-          alt="Pastel towels on gold stand with decorative bottle and mirror frame."
-          class="rounded-xl mb-5"
-        />
-        <figcaption class="px-5">
-          <Header
-            class="max-w-xs text-2xl mb-2 text-wine-red font-bold leading-relaxed"
-            >PERFECT GIFT EVEN FOR YOURSELF!</Header
-          >
-          <p class="max-w-xs text-justify leading-loose">
-            Well suited as a gift set, these cotton towels look so decorative
-            and soft that we won’t judge if you want to keep them for your
-            family and yourself.
-          </p>
-        </figcaption>
-      </figure>
-
-      <!-- card 2 -->
-      <figure class="shadow-xl pb-5 rounded-md">
-        <img
-          :src="DecorativeTowelsOrnateBackground"
-          alt="Embroidered towels stacked against ornate white background."
-          class="rounded-xl mb-5"
-        />
-        <figcaption class="px-5">
-          <Header class="text-2xl mb-2 text-wine-red font-bold leading-relaxed"
-            >USE FOR ANYTHING</Header
-          >
-          <p class="max-w-xs text-justify leading-loose">
-            Perfect for your hands, face and body… and for your kids too! These
-            towels’ softness is ideal for toddler’s and baby’s delicate skin.
-            And the best part? They’re washable, quick-dry towels that will last
-            forever.
-          </p>
-        </figcaption>
-      </figure>
-
-      <!-- card 3 -->
-      <figure
-        class="shadow-xl pb-5 rounded-md md:col-span-2 md:justify-self-center lg:col-auto"
-      >
-        <img
-          :src="TowelDisplay"
-          alt="Stack of floral towels on white shelf."
-          class="rounded-xl mb-5"
-        />
-        <figcaption class="px-5">
-          <Header class="text-2xl mb-2 text-wine-red font-bold leading-relaxed"
-            >EXTRA ABSORBENT</Header
-          >
-          <p class="max-w-xs text-justify leading-loose">
-            Thanks to its natural properties, our 100% Turkish Cotton Towels are
-            super absorbent, making the m perfect for drying off in any
-            scenario.
-          </p>
-        </figcaption>
-      </figure>
+      <section v-for="(product, index) in trendingProducts" :key="index">
+        <figure class="shadow-xl pb-16 rounded-md">
+          <img
+            :src="product.images"
+            :alt="product.altText"
+            class="rounded-xl mb-5"
+          />
+          <figcaption class="px-5">
+            <Header
+              class="max-w-xs text-2xl mb-2 text-wine-red font-bold leading-relaxed"
+              >{{ product.header }}</Header
+            >
+            <p class="max-w-xs text-justify leading-loose">
+              {{ product.description }}
+            </p>
+          </figcaption>
+        </figure>
+      </section>
     </section>
 
     <!-- Link Show More -->
@@ -88,31 +57,4 @@ import TowelDisplay from "@/assets/images/towel-display.png";
       >
     </div>
   </section>
-
-  <!-- <section>
-    <div class="grid grid-cols-4 gap-4 p-4">
-      <div class="bg-blue-200 p-4">Div 1</div>
-      <div class="bg-green-200 p-4">Div 2</div>
-      <div class="bg-red-200 p-4">Div 3</div>
-      <div class="bg-red-200 p-4">Div 4</div>
-      <div class="bg-red-200 p-4">Div 5</div>
-    </div>
-
-    <div class="grid grid-cols-1 gap-4 px-5 md:grid-cols-2 lg:grid-cols-3">
-      
-      <div class="flex flex-col space-y-4">
-        <div class="bg-red-500 p-4">Div 1</div>
-        <div class="bg-blue-500 p-4">Div 2</div>
-      </div>
-
-      
-      <div class="bg-green-500 p-4">Div 3</div>
-
-      
-      <div class="flex flex-col space-y-4">
-        <div class="bg-yellow-500 p-4">Div 4</div>
-        <div class="bg-purple-500 p-4">Div 5</div>
-      </div>
-    </div>
-  </section> -->
 </template>

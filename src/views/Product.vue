@@ -1,7 +1,7 @@
 <script setup>
 import FluffyTowelPile from "@/assets/images/fluffy-towel-pile.png";
 import Card from "@/components/Card.vue";
-import Header from "@/components/Header.vue";
+import MainHeader from "@/components/MainHeader.vue";
 </script>
 
 <template>
@@ -9,8 +9,8 @@ import Header from "@/components/Header.vue";
     <section class="flex items-center flex-col gap-5 md:flex-col lg:flex-row">
       <div>
         <Card class="rounded-3xl md:pt-20 md:pb-20">
-          <Header class="text-wine-red font-bold text-3xl mb-5"
-            >Organic Cotton and Bamboo</Header
+          <MainHeader class="text-wine-red font-bold text-3xl mb-5"
+            >Organic Cotton and Bamboo</MainHeader
           >
           <p class="mb-8 text-justify leading-loose">
             Designed to please you with the best of Turkish’s heritage in

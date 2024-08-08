@@ -1,5 +1,5 @@
 <script setup>
-import Header from "@/components/Header.vue";
+import Header from "@/components/MainHeader.vue";
 import Card from "@/components/Card.vue";
 import Button from "@/components/Button.vue";
 import BambooTowel from "@/assets/images/bamboo-towel.png";

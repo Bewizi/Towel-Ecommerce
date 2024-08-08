@@ -1,5 +1,5 @@
 <script setup>
-import Header from "@/components/Header.vue";
+import Header from "@/components/MainHeader.vue";
 import Visa from "@/assets/images/visa.png";
 import DiscoverNetwork from "@/assets/images/discover-network.png";
 import AmericanExpress from "@/assets/images/american-express.png";
@@ -7,6 +7,7 @@ import MasterCard from "@/assets/images/master-card.png";
 import JCB from "@/assets/images/jcb.png";
 import DinersClub from "@/assets/images/diners-club.png";
 import PayPal from "@/assets/images/paypal.png";
+import MainHeader from "@/components/MainHeader.vue";
 </script>
 
 <template>
@@ -28,8 +29,8 @@ import PayPal from "@/assets/images/paypal.png";
 
       <!-- Contact us -->
       <section class="mb-8">
-        <Header class="font-semibold text-2xl mb-3 md:text-4xl">
-          Contact Us</Header
+        <MainHeader class="font-semibold text-2xl mb-3 md:text-4xl">
+          Contact Us</MainHeader
         >
         <ul class="leading-10 text-off-dark/75">
           <li class="max-w-40 flex">

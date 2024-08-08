@@ -1,12 +1,13 @@
 <script setup>
 import Card from "@/components/Card.vue";
+import MainHeader from "@/components/MainHeader.vue";
 </script>
 
 <template>
   <section class="max-w-7xl mx-auto px-5 mb-28 lg:px-0">
     <section class="mb-10">
-      <Header class="text-center font-bold text-2xl md:text-5xl"
-        >Our Testimonials</Header
+      <MainHeader class="text-center font-bold text-2xl md:text-5xl"
+        >Our Testimonials</MainHeader
       >
     </section>
 

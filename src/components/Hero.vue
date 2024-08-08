@@ -1,5 +1,6 @@
 <script setup>
 import ElegantBathroomDecor from "@/assets/images/elegant-bathroom-decor.png";
+import MainHeader from "@/components/MainHeader.vue";
 </script>
 
 <template>
@@ -12,12 +13,12 @@ import ElegantBathroomDecor from "@/assets/images/elegant-bathroom-decor.png";
     <figcaption
       class="absolute top-28 left-5 text-white md:top-24 md:left-20 lg:top-60 lg:left-20"
     >
-      <Header
+      <MainHeader
         class="font-bold mb-1 whitespace-normal md:text-4xl md:mb-3 md:leading-tight lg:text-6xl lg:mb-5"
       >
         Beautiful Color <br class="hidden md:inline" />
         Contrast!
-      </Header>
+      </MainHeader>
       <p class="mb-5 md:text-xl md:mb-8 lg:mb-10">
         Over 50 Collections to Choose for!
       </p>

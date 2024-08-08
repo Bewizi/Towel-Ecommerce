@@ -1,5 +1,5 @@
 <script setup>
-import Header from "@/components/Header.vue";
+import Header from "@/components/MainHeader.vue";
 import ElegantBathroomDecor from "@/assets/images/elegant-bathroom-decor.png";
 import TowelStack from "@/assets/images/towel_stack.png";
 import TowelLadder from "@/assets/images/towel_ladder.png";

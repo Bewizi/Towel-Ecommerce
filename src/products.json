@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "header": "PERFECT GIFT EVEN FOR YOURSELF!",
+      "description": "Well suited as a gift set, these cotton towels look so decorative and soft that we won't judge if you want to keep them for your family and yourself",
+      "images": "/images/elegant-bathroom-towel-display.png",
+      "altText": "Pastel towels on gold stand with decorative bottle and mirror frame"
+    },
+    {
+      "header": "USE FOR ANYTHING",
+      "description": "Perfect for your hands, face and body... and for your kids too! These towels' softness is ideal for toddler's  and baby's delicate skin. And the best part? They're washable, quick-dry towels that will last forever.",
+      "images": "/images/decorative-towels-ornate-background.png",
+      "altText": "Embroidered towels stacked against ornate white background."
+    },
+    {
+      "header": "EXTRA ABSORBENT",
+      "description": "Thanks to its natural properties, our 100% Turkish Cotton Towels are super absorbent, maing the m perfect for drying off in any scenario",
+      "images": "/images/towel-display.png",
+      "altText": "Embroidered towels stacked against ornate white background."
+    }
+  ]
+}

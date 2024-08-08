@@ -1,6 +1,6 @@
 <script setup>
 import IconCard from "@/components/IconCard.vue";
-import Header from "@/components/Header.vue";
+import Header from "@/components/MainHeader.vue";
 </script>
 
 <template>
