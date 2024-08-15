@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "images": "/images/luxury-bathrobe-towel-set.png",
+    "altText": "Two folded bathrobes with matching towels and a decorative flower, suggesting a luxurious spa or hotel setting.",
+    "description": "Concetti Di-Lusso ALESANDRDO Luxury Turkish Spa Towels and ganic Bamboo Robes 12 PC set ",
+    "price": 169.99,
+    "salshPrice": 199.99,
+    "addcart": "add cart"
+  },
+  {
+    "id": 2,
+    "images": "/images/bathrobe-color-options.png",
+    "altText": "Woman in white bathrobe with colored fabric swatches beside her.",
+    "description": "Concetti Di-Lusso CAPPY Organic Turkish Cotton - Set of 4 in Gift Box",
+    "price": 59.99,
+    "salshPrice": 199.99,
+    "addcart": "add cart"
+  },
+  {
+    "id": 3,
+    "images": "/images/embroidered-fringe-towels.png",
+    "altText": "Stack of decorative towels with floral patterns and fringed edges in pastel colors.",
+    "description": "Concetti Di-Lusso Luxury 100% Turkish Bamboo Shawl Spa Robe in Premium Gift Box",
+    "price": 159.99,
+    "salshPrice": 199.99,
+    "addcart": "add cart"
+  },
+  {
+    "id": 4,
+    "images": "/images/soft-bathrobe-set.png",
+    "altText": "Pink and white bathrobe and towel set with floral embroidery.",
+    "description": "Concetti Di-Lusso ANNA Luxury 100% Turkish Organic Cotton VIP Spa Robe/Towels 10 PC Set",
+    "price": 59.99,
+    "salshPrice": 199.99,
+    "addcart": "add cart"
+  }
+]

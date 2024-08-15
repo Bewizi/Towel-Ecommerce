@@ -2,22 +2,46 @@
 import IconCard from "@/components/IconCard.vue";
 import MainHeader from "@/components/MainHeader.vue";
 import { ref, onMounted, onBeforeUnmount } from "vue";
+import axios from "axios";
 
 const isBarVisible = ref(true);
 const showAnchorLinks = ref(false);
 const isSticky = ref(false);
 const isHeartActive = ref(false);
 const isSearchModalVisible = ref(false); // Add this line
+const searchQuery = ref("");
+const products = ref([]);
+const filteredProducts = ref([]);
 
 // Function to open the search modal
 const openSearchModal = () => {
   isSearchModalVisible.value = true;
-  console.log("opened");
 };
 
 // Function to close the search modal
 const closeSearchModal = () => {
   isSearchModalVisible.value = false;
+  searchQuery.value = "";
+  filteredProducts = [];
+};
+
+// Function to fetch products
+const fetchProducts = async () => {
+  try {
+    const response = await axios.get("http://localhost:3000/products");
+    products.value = response.data;
+    // console.log(products.value);
+  } catch (error) {
+    console.error("Error fetching products", error);
+  }
+};
+
+// function to search products
+const searchProducts = () => {
+  const query = searchQuery.value.toLowerCase();
+  filteredProducts.value = products.value.filter((product) =>
+    product.header.toLowerCase().includes(query)
+  );
 };
 
 // Opens the anchor links
@@ -40,6 +64,8 @@ function close() {
 
 // Onmount to show the width list
 onMounted(() => {
+  fetchProducts();
+
   if (window.innerWidth >= 1024) {
     showAnchorLinks.value = true;
   }
@@ -66,7 +92,6 @@ onMounted(() => {
 
 const isHeartClicked = () => {
   isHeartActive.value = !isHeartActive.value;
-  console.log("heart clicked", isHeartActive.value);
 };
 </script>
 
@@ -185,7 +210,7 @@ const isHeartClicked = () => {
     <!-- Search Modal -->
     <div
       v-if="isSearchModalVisible"
-      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 lg:top-16 min-h-screen"
     >
       <div class="bg-white p-5 rounded-md shadow-lg w-3/4 max-w-md">
         <div class="flex justify-between items-center mb-4">
@@ -196,10 +221,27 @@ const isHeartClicked = () => {
           ></button>
         </div>
         <input
+          v-model="searchQuery"
+          @input="searchProducts"
           type="text"
           placeholder="Type to search..."
           class="w-full p-3 border border-gray-300 rounded-md"
         />
+
+        <!-- Display filtered products -->
+        <div v-if="filteredProducts.length" class="mt-5">
+          <ul>
+            <li
+              v-for="product in filteredProducts"
+              :key="product.header"
+              class="border-b border-gray-200 py-2"
+            >
+              <h4 class="text-lg font-semibold">{{ product.header }}</h4>
+              <p>{{ product.description }}</p>
+            </li>
+          </ul>
+        </div>
+        <p v-else class="text-center mt-5">No products found</p>
       </div>
     </div>
   </section>
